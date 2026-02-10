@@ -1,0 +1,186 @@
+/* ===== リセット ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== カラーテーマ（ラベンダー系） ===== */
+:root {
+  --lavender: #e9e4f7;
+  --lavender-dark: #b7a9e6;
+  --lavender-deep: #8e7cc3;
+  --white: #ffffff;
+  --text: #444;
+  --muted: #777;
+}
+
+/* ===== 全体 ===== */
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  line-height: 1.7;
+  background: var(--lavender);
+  color: var(--text);
+}
+
+/* ===== ヘッダー ===== */
+.site-header {
+  background: var(--white);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: var(--lavender-deep);
+}
+
+/* ===== ヒーロー ===== */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, var(--lavender), #f7f5ff);
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+/* ボタン */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 24px;
+  background: var(--lavender-deep);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #7564b6;
+  transform: translateY(-2px);
+}
+
+/* ===== 共通セクション ===== */
+.section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+}
+
+/* ===== 2カラム ===== */
+.two-col {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.profile-box {
+  text-align: center;
+}
+
+.profile {
+  width: 180px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== グリッド（制作物） ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* カード */
+.card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--lavender-deep);
+  text-decoration: none;
+}
+
+/* ===== スキル（チップ） ===== */
+.chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chips li {
+  background: var(--white);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid var(--lavender-dark);
+}
+
+/* ===== フッター ===== */
+.site-footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--white);
+  margin-top: 40px;
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* ===== スマホ対応 ===== */
+@media (max-width: 768px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    display: none; /* シンプル化 */
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+}
